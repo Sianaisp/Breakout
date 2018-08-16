@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+    color: white;
+    font-family: "Monoton";
+    font-size: 100px;
+}
+
+body {
+    background-image: url("backgrounds/dash.jpg");
+    background-size: cover;
+}
+
+.night {
+    border-radius: 10;
+}
