@@ -25,6 +25,7 @@ var bricks = [];
 var score = 0;
 var lives = 3;
 var gamePlay;
+var noise;
 var soundH;
 var hit;
 var loose;
@@ -128,7 +129,7 @@ function collisionDetection() {
                         score++;
                         bomb = new Audio("videogamemusic/bomb.wav");
                         bomb.play();
-                        bomb.volume = 0.5;
+                        bomb.volume = 0.8;
 
                         life2 = null;
                     }
@@ -165,7 +166,7 @@ function win() {
     clearInterval(gamePlay);
     setTimeout(function() {
         alert("CONGRATULATIONS! ON TO LEVEL 2!!", "WIN");
-    }, 500);
+    }, 1000);
 }
 var w = 300;
 var z = 115;
@@ -267,12 +268,14 @@ function draw() {
     }
     if (y + dy < 0) {
         dy = -dy;
-    } else if (y + dy > canvas.height - 22 - paddleHeight) {
-        if (x + 20 > paddleX && x - 10 < paddleX + paddleWidth) {
+    } else if (y + dy > canvas.height - 18 - paddleHeight) {
+        if (x + 20 > paddleX && x < paddleX + paddleWidth) {
             hit = new Audio("videogamemusic/hit.wav");
             hit.play();
             dy = -dy;
         } else {
+            noise = new Audio("videogamemusic/fall.wav");
+            noise.play();
             lives--;
             if (!lives) {
                 gameOver();
@@ -424,7 +427,7 @@ function draw2() {
     }
     if (y + dy < 0) {
         dy = -dy;
-    } else if (y + dy > canvas.height - 25 - paddleHeight) {
+    } else if (y + dy > canvas.height - 20 - paddleHeight) {
         if (x + 20 > paddleX && x - 10 < paddleX + paddleWidth) {
             dy = -dy;
             hit = new Audio("videogamemusic/hit.wav");
@@ -574,7 +577,7 @@ function draw3() {
     }
     if (y + dy < 0) {
         dy = -dy;
-    } else if (y + dy > canvas.height - 25 - paddleHeight) {
+    } else if (y + dy > canvas.height - 20 - paddleHeight) {
         if (x + 20 > paddleX && x - 10 < paddleX + paddleWidth) {
             dy = -dy;
             hit = new Audio("videogamemusic/hit.wav");
