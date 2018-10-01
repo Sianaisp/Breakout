@@ -1,0 +1,23 @@
+{
+  "name": "breakout",
+  "version": "1.0.0",
+  "description": "1. Clone or copy this repository:        Go to your desktop, git clone \"PASTE HERE\" 2. Open the folder in your code editor.        3. `npm install` 4. `npm run dev` 5. Go to `http://localhost:3000`",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sianaisp/Breakout.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sianaisp/Breakout/issues"
+  },
+  "homepage": "https://github.com/Sianaisp/Breakout#readme",
+  "dependencies": {
+    "node": "^10.11.0"
+  },
+  "devDependencies": {}
+}
