@@ -4,8 +4,8 @@
        Go to your desktop, git clone "PASTE HERE"
 2. Open the folder in your code editor.       
 3. `npm install`
-4. `npm run dev`
-5. Go to `http://localhost:3000`
+4. `npm init`
+5. Open the Html file live on your server.
 
 # Presentation
 
